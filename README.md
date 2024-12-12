@@ -38,7 +38,7 @@ Send a POST request to /schedule with the following JSON payload
 
 ### Update an existing schedule
 
-!*   Send a PUT request to `/schedule/1` with the following JSON payload:
+*   Send a PUT request to `/schedule/1` with the following JSON payload:
     ```json
 {
     "id": "1",
@@ -54,3 +54,4 @@ Send a POST request to /schedule with the following JSON payload
 # Delete a schedule
 * Send a DELETE request to /schedule/2.
 * The API will return a success message in JSON format.
+!good day
