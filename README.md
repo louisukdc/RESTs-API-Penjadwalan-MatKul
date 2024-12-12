@@ -131,14 +131,17 @@ func deleteSchedule(w http.ResponseWriter, r *http.Request) {
 
 
 ## 1. Start the Go server: *go run main.go*.
-## 2.  Use tools like Postman or cURL to test the following API endpoints:
+## 2.  Menampilkan Jadwal ((GET):
 * GET /schedules – menampiilkan semua schedules.
 ```
-POST http://localhost:8080/schedules
+http://localhost:8080/schedules
 ```
 * GET /schedules/{id} – gunakan ID sebagai cara spesiifk menampilkan schedule.
 ```
-POST http://localhost:8080/schedules/1
+http://localhost:8080/schedules/1
+
+## 3. Menambahkan KEY dan VALUE ke Schedules (POST)
+
 ```
 * POST /schedules – memebuat perubahan baru di kirimkan ke JSON payload. *Contohnya seperti ini:*
   ```
@@ -151,28 +154,11 @@ POST http://localhost:8080/schedules/1
   }
   ```
 
-URL: POST:
-```
-http://localhost:8080/schedules
-```
-
-### Body JSON:
-```
-{
-  "id": "4",
-  "course": "Biologi",
-  "day": "Kamis",
-  "time": "09:00 - 11:00",
-  "location": "D404"
-}
-```
-
-## 3. Memperbarui Jadwal (PUT):
+## 4. Memperbarui Jadwal (PUT):
 ```
 URL: PUT http://localhost:8080/schedules/4
 ```
 
-###  Body JSON:
 
 ```
 {
@@ -185,7 +171,7 @@ URL: PUT http://localhost:8080/schedules/4
 ```
 
 
-## 4. Menghapus Jadwal (DELETE):
+## 5. Menghapus Jadwal (DELETE):
 
 ```
 URL: DELETE http://localhost:8080/schedules/4
