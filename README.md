@@ -155,14 +155,14 @@ http://localhost:8080/schedules
 * GET /schedules/{id} – gunakan ID sebagai cara spesiifk menampilkan schedule.
 
 ```
-http://localhost:8080/schedules/1
+http://localhost:8080/schedule/1
 ```
 
 ## 3. Menambahkan KEY dan VALUE ke Schedules (POST)
 ![Screenshot halaman beranda](post.png)
 
 ```
-http://localhost:8080/schedules
+http://localhost:8080/schedule
 ```
 
 ```
@@ -179,7 +179,7 @@ http://localhost:8080/schedules
 ![Screenshot halaman beranda](put.png)
 
 ```
-http://localhost:8080/schedules/4
+http://localhost:8080/schedule/4
 ```
 
 
@@ -200,5 +200,5 @@ http://localhost:8080/schedules/4
 *contohnya menghapus ID=4 Course= Biologi Terapan yang baru dibuat*
 
 ```
-http://localhost:8080/schedules/4
+http://localhost:8080/schedule/4
 ```
