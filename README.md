@@ -142,6 +142,9 @@ http://localhost:8080/schedules/1
 ```
 
 ## 3. Menambahkan KEY dan VALUE ke Schedules (POST)
+```
+http://localhost:8080/schedules
+```
 
 ```
   {
