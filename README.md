@@ -52,5 +52,5 @@ Send a POST request to /schedule with the following JSON payload
 * The API will return the updated schedule in JSON format.
 
 # Delete a schedule
-Send a DELETE request to /schedule/2.
-The API will return a success message in JSON format.
+* Send a DELETE request to /schedule/2.
+* The API will return a success message in JSON format.
