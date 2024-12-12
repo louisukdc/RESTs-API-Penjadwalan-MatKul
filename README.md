@@ -3,7 +3,7 @@
 ## *Overview*
 Ini adalah API RESTful sederhana yang dibuat menggunakan [Go](https://go.dev/doc/) dan router [Gorilla Mux](https://github.com/gorilla/mux.git). API ini memungkinkan pengguna untuk mengelola jadwal kuliah, termasuk membuat, membaca, memperbarui, dan menghapus jadwal.
 
-## End Point
+## *End Point8
 1. **GET /schedules**
 Mengembalikan daftar semua jadwal dalam format JSON.
 2. **GET /schedule/{id}**
@@ -35,7 +35,8 @@ _Mengharapkan muatan JSON dengan bidang-bidang berikut:_
 
 # Penjelasan Kode Program
 
-## Function GET *Guna menampilkan semua KEY dan VALUE yang ada*
+
+## *Function GET *Guna menampilkan semua KEY dan VALUE yang ada**
 
 ```
 func getSchedule(w http.ResponseWriter, r *http.Request) {
@@ -51,7 +52,7 @@ func getSchedule(w http.ResponseWriter, r *http.Request) {
 }
 ```
 
-## Function Create *Guna menambahkan KEY dan VALUE yang baru*
+## *Function Create *Guna menambahkan KEY dan VALUE yang baru**
 
 ```
 func createSchedule(w http.ResponseWriter, r *http.Request) {
@@ -65,7 +66,7 @@ func createSchedule(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(newSchedule)
 ```
 
-## Function Update *Guna mengubah Value yang sudah ada*
+## *Function Update *Guna mengubah Value yang sudah ada**
 
 ```
 func updateSchedule(w http.ResponseWriter, r *http.Request) {
@@ -87,7 +88,9 @@ func updateSchedule(w http.ResponseWriter, r *http.Request) {
 	http.Error(w, "Jadwal tidak ditemukan", http.StatusNotFound)
 }
 ```
-## Function Delete *Guna  menghapus VALUE ddan KEY yang sudah ada*
+
+
+## *Function Delete *Guna  menghapus VALUE ddan KEY yang sudah ada*
 
 ```
 func deleteSchedule(w http.ResponseWriter, r *http.Request) {
@@ -103,7 +106,9 @@ func deleteSchedule(w http.ResponseWriter, r *http.Request) {
 	http.Error(w, "Jadwal tidak ditemukan", http.StatusNotFound)
 }
 ```
-## Haandle Function untuk route API di definisi pada file *main.go*
+
+
+## *Haandle Function untuk route API di definisi pada file *main.go**
 
 ```
 	// Definisikan route untuk API
@@ -115,7 +120,7 @@ func deleteSchedule(w http.ResponseWriter, r *http.Request) {
 
 ```
 
-## Running server pada port 8000
+## *Running server pada port 8000*
 
 ```
 	fmt.Println("Server is running on port 8000...")
@@ -125,24 +130,51 @@ func deleteSchedule(w http.ResponseWriter, r *http.Request) {
 #  Running API di POSTMAN
 
 
-## Create a new schedule
-Menggunakan method **PUT** pada JSON
-```*   The API will return the newly created schedule in JSON format.
+1. Start the Go server: *go run main.go*.
+2.  Use tools like Postman or cURL to test the following API endpoints:
+* GET /schedules – menampiilkan semua schedules.
+* GET /schedules/{id} – gunakan ID sebagai cara spesiifk untuk request ke schedule.
+* POST /schedules – memebuat perubahan baru di kirimkan ke JSON payload. *Contohnya seperti ini:*
+  ```
+  {
+  "id": "4",
+  "course": "Biologi",
+  "day": "Kamis",
+  "time": "09:00 - 11:00",
+  "location": "D404"
+}
+```
+Menambah Jadwal Baru (POST):
 
-### Update an existing schedule
-
+URL: POST http://localhost:8080/schedules
+Body JSON:
+json
+Copy code
 {
-    "id": "1",
-    "course": "Matematika",
-    "day": "Senin",
-    "time": "09:00 - 11:00",
-    "location": "A101"
+  "id": "4",
+  "course": "Biologi",
+  "day": "Kamis",
+  "time": "09:00 - 11:00",
+  "location": "D404"
+}
+3. Memperbarui Jadwal (PUT):
+```
+URL: PUT http://localhost:8080/schedules/4
+```
+###  Body JSON:
+
+```
+{
+  "id": "4",
+  "course": "Biologi Terapan",
+  "day": "Kamis",
+  "time": "10:00 - 12:00",
+  "location": "D404"
 }
 ```
 
-* The API will return the updated schedule in JSON format.
 
-# Delete a schedule
-* Send a DELETE request to /schedule/2.
-* The API will return a success message in JSON format.
-!good day
+4. Menghapus Jadwal (DELETE):
+```
+URL: DELETE http://localhost:8080/schedules/4
+```
