@@ -4,12 +4,12 @@
 Ini adalah API RESTful sederhana yang dibuat menggunakan Go dan router Gorilla Mux. API ini memungkinkan pengguna untuk mengelola jadwal kuliah, termasuk membuat, membaca, memperbarui, dan menghapus jadwal.
 
 # End Point
-1. *GET /schedules*
+1. **GET /schedules**
 Mengembalikan daftar semua jadwal dalam format JSON.
-2. *GET /schedule/{id}*
+2. **GET /schedule/{id}**
 Mengembalikan satu jadwal berdasarkan ID dalam format JSON.
 Jika jadwal tidak ditemukan, mengembalikan kesalahan 404.
-3. *POST /schedule*
+3. **POST /schedule**
 * **Membuat jadwal baru.**
 * Expects a JSON JSON dengan bidang-bidang berikut:
 * id: Pengidentifikasi unik untuk jadwal.
