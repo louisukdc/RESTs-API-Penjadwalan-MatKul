@@ -145,7 +145,6 @@ http://localhost:8080/schedules/1
 
 ```
 * POST /schedules – memebuat perubahan baru di kirimkan ke JSON payload. *Contohnya seperti ini:*
-  ```
   {
   "id": "4",
   "course": "Biologi",
@@ -153,7 +152,7 @@ http://localhost:8080/schedules/1
   "time": "09:00 - 11:00",
   "location": "D404"
   }
-  ```
+```
 
 ## 4. Memperbarui Jadwal (PUT):
 ```
