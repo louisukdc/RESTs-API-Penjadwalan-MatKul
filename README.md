@@ -38,7 +38,6 @@ Menggunakan method **PUT** pada JSON
 
 ### Update an existing schedule
 
-    ```json
 {
     "id": "1",
     "course": "Matematika",
