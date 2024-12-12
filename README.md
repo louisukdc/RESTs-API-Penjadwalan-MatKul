@@ -130,7 +130,11 @@ func deleteSchedule(w http.ResponseWriter, r *http.Request) {
 #  Running API di POSTMAN
 
 
-## 1. Start the Go server: *go run main.go*.
+## 1. Start the Go server: 
+```
+go run main.go
+```
+
 ## 2.  Menampilkan Jadwal ((GET):
 * GET /schedules – menampiilkan semua schedules.
 ```
