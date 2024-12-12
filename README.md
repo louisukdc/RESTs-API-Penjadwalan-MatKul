@@ -33,6 +33,8 @@ _Mengharapkan muatan JSON dengan bidang-bidang berikut:_
 * Jika jadwal tidak ditemukan, mengembalikan kesalahan 404.
 
 
+# Penjelasan Kode Program
+
 ## Function GET *Guna menampilkan semua KEY dan VALUE yang ada*
 
 ```
@@ -85,7 +87,7 @@ func updateSchedule(w http.ResponseWriter, r *http.Request) {
 	http.Error(w, "Jadwal tidak ditemukan", http.StatusNotFound)
 }
 ```
-## Function Delete *Guna  menghapus VALUE ddan KEY yang ssuddah ada*
+## Function Delete *Guna  menghapus VALUE ddan KEY yang sudah ada*
 
 ```
 func deleteSchedule(w http.ResponseWriter, r *http.Request) {
@@ -101,9 +103,29 @@ func deleteSchedule(w http.ResponseWriter, r *http.Request) {
 	http.Error(w, "Jadwal tidak ditemukan", http.StatusNotFound)
 }
 ```
+## Haandle Function untuk route API di definisi pada file *main.go*
+
+```
+	// Definisikan route untuk API
+	r.HandleFunc("/schedules", getSchedules).Methods("GET")
+	r.HandleFunc("/schedule/{id}", getSchedule).Methods("GET")
+	r.HandleFunc("/schedule", createSchedule).Methods("POST")
+	r.HandleFunc("/schedule/{id}", updateSchedule).Methods("PUT")
+	r.HandleFunc("/schedule/{id}", deleteSchedule).Methods("DELETE"
+
+```
+
+## Running server pada port 8000
+
+```
+	fmt.Println("Server is running on port 8000...")
+	log.Fatal(http.ListenAndServe(":8000", r))
+```
+
+#  Running API di POSTMAN
 
 
-# Create a new schedule
+## Create a new schedule
 Menggunakan method **PUT** pada JSON
 ```*   The API will return the newly created schedule in JSON format.
 
