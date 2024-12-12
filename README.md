@@ -1,5 +1,6 @@
 # 🖥️ RESTs-API-Penjadwalan-MatKul 🔥
 
+![Screenshot halaman beranda](screenshot.png)
 
 ## *Overview*
 Ini adalah API RESTful sederhana yang dibuat menggunakan [Go](https://go.dev/doc/) dan router [Gorilla Mux](https://github.com/gorilla/mux.git). API ini memungkinkan pengguna untuk mengelola jadwal kuliah, termasuk membuat, membaca, memperbarui, dan menghapus jadwal.
@@ -34,7 +35,7 @@ _Mengharapkan muatan JSON dengan bidang-bidang berikut:_
 * Jika jadwal tidak ditemukan, mengembalikan kesalahan 404.
 
 
-# Penjelasan Kode Program
+# 💡 Penjelasan Kode Program
 
 
 ## *Function GET *Guna menampilkan semua KEY dan VALUE yang ada**
@@ -128,7 +129,7 @@ func deleteSchedule(w http.ResponseWriter, r *http.Request) {
 	log.Fatal(http.ListenAndServe(":8000", r))
 ```
 
-#  Running API di POSTMAN
+# 🚀 Running API di POSTMAN
 *❗ Perlu diperhatikan ketika masuk Postman pilih dulu **Body** lalu **Raw** dan preetty nya **JSON** *
 
 ## 1. Start the Go server: 
