@@ -144,7 +144,6 @@ http://localhost:8080/schedules/1
 ## 3. Menambahkan KEY dan VALUE ke Schedules (POST)
 
 ```
-* POST /schedules – memebuat perubahan baru di kirimkan ke JSON payload. *Contohnya seperti ini:*
   {
   "id": "4",
   "course": "Biologi",
@@ -172,6 +171,7 @@ http://localhost:8080/schedules/4
 
 
 ## 5. Menghapus Jadwal (DELETE):
+*contohnya menghapus ID=4 Course= Biologi Terapan yang baru dibuat*
 
 ```
 http://localhost:8080/schedules/4
