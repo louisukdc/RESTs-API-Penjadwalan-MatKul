@@ -12,8 +12,8 @@ Jika jadwal tidak ditemukan, mengembalikan kesalahan 404.
 3. *POST /schedule*
 * **Membuat jadwal baru.**
 * Expects a JSON JSON dengan bidang-bidang berikut:
-_ id: Pengidentifikasi unik untuk jadwal.
-_ course: Nama kursus.
+. id: Pengidentifikasi unik untuk jadwal.
+. course: Nama kursus.
 _ day: Hari dalam seminggu (misalnya, "Senin", "Selasa", dll.).
 _ time: Waktu kursus (misalnya, "08:00 - 10:00").
 _ location: Lokasi kursus (misalnya, "A101", "B202", dll.).
