@@ -31,3 +31,33 @@ DELETE /schedule/{id}
 Menghapus jadwal berdasarkan ID.
 Mengembalikan pesan sukses dalam format JSON.
 Jika jadwal tidak ditemukan, mengembalikan kesalahan 404.
+
+
+## Create New Schedule
+
+This section describes the API endpoint for creating a new schedule entry.
+
+**Endpoint:** (Replace with your actual endpoint URL)
+
+**HTTP Method:** POST
+
+**Expected Payload (JSON):**
+
+| Field        | Description                                 | Data Type           | Required |
+|--------------|----------------------------------------------|--------------------|----------|
+| id            | Unique identifier for the schedule.       | String              | Yes      |
+| course        | Name of the course.                          | String              | Yes      |
+| day           | Day of the week (e.g., "Senin", "Selasa").    | String              | Yes      |
+| time          | Time of the course (e.g., "08:00 - 10:00").   | String              | Yes      |
+| location      | Location of the course (e.g., "A101", "B202"). | String              | Yes      |
+
+**Example Payload:**
+
+```json
+{
+  "id": "schedule-1",
+  "course": "Introduction to Programming",
+  "day": "Senin",
+  "time": "08:00 - 10:00",
+  "location": "A101"
+}
