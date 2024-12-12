@@ -139,9 +139,10 @@ go run main.go
 ```
 
 ## 2.  Menampilkan Jadwal ((GET):
-* GET /schedules – menampiilkan semua schedules.
 
 ![Screenshot halaman beranda](Terminal.png)
+
+* GET /schedules – menampiilkan semua schedules.
 
 ```
 http://localhost:8080/schedules
