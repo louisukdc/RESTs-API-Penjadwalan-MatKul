@@ -151,9 +151,11 @@ POST http://localhost:8080/schedules/1
 }
 ```
 
+URL: POST:
 ```
-URL: POST http://localhost:8080/schedules
+http://localhost:8080/schedules
 ```
+
 ### Body JSON:
 ```
 {
@@ -164,10 +166,12 @@ URL: POST http://localhost:8080/schedules
   "location": "D404"
 }
 ```
+
 ## 3. Memperbarui Jadwal (PUT):
 ```
 URL: PUT http://localhost:8080/schedules/4
 ```
+
 ###  Body JSON:
 
 ```
@@ -182,6 +186,7 @@ URL: PUT http://localhost:8080/schedules/4
 
 
 ## 4. Menghapus Jadwal (DELETE):
+
 ```
 URL: DELETE http://localhost:8080/schedules/4
 ```
