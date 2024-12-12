@@ -142,18 +142,25 @@ go run main.go
 ```
 
 ## 2.  Menampilkan Jadwal ((GET):
+![Screenshot halaman beranda](Screenshot.png)
 
 * GET /schedules – menampiilkan semua schedules.
 
 ```
 http://localhost:8080/schedules
 ```
+
+![Screenshot halaman beranda](get_id.png)
+
 * GET /schedules/{id} – gunakan ID sebagai cara spesiifk menampilkan schedule.
+
 ```
 http://localhost:8080/schedules/1
 ```
 
 ## 3. Menambahkan KEY dan VALUE ke Schedules (POST)
+![Screenshot halaman beranda](post.png)
+
 ```
 http://localhost:8080/schedules
 ```
@@ -169,6 +176,8 @@ http://localhost:8080/schedules
 ```
 
 ## 4. Memperbarui Jadwal (PUT):
+![Screenshot halaman beranda](put.png)
+
 ```
 http://localhost:8080/schedules/4
 ```
@@ -186,6 +195,8 @@ http://localhost:8080/schedules/4
 
 
 ## 5. Menghapus Jadwal (DELETE):
+![Screenshot halaman beranda](delete.png)
+
 *contohnya menghapus ID=4 Course= Biologi Terapan yang baru dibuat*
 
 ```
