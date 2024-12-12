@@ -1,6 +1,6 @@
 # 🖥️ RESTs-API-Penjadwalan-MatKul 🔥
 
-![Screenshot halaman beranda](screenshot.png)
+![Screenshot halaman beranda](Screenshot.png)
 
 ## *Overview*
 Ini adalah API RESTful sederhana yang dibuat menggunakan [Go](https://go.dev/doc/) dan router [Gorilla Mux](https://github.com/gorilla/mux.git). API ini memungkinkan pengguna untuk mengelola jadwal kuliah, termasuk membuat, membaca, memperbarui, dan menghapus jadwal.
