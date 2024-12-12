@@ -35,7 +35,8 @@ _Mengharapkan muatan JSON dengan bidang-bidang berikut:_
 
 ## Function GET *Guna menampilkan semua KEY dan VALUE yang ada*
 
-```func getSchedule(w http.ResponseWriter, r *http.Request) {
+```
+func getSchedule(w http.ResponseWriter, r *http.Request) {
 	params := mux.Vars(r)
 	for _, schedule := range schedules {
 		if schedule.ID == params["id"] {
