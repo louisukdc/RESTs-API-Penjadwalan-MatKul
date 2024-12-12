@@ -18,7 +18,7 @@ _Expects a JSON dengan bidang-bidang berikut:_
 * time: Waktu kursus (misalnya, "08:00 - 10:00").
 * location: Lokasi kursus (misalnya, "A101", "B202", dll.).
 * Mengembalikan jadwal yang baru dibuat dalam format JSON.
-4. *PUT /schedule/{id}*
+4. **PUT /schedule/{id}**
  **Memperbarui jadwal yang ada.**
 _Mengharapkan muatan JSON dengan bidang-bidang berikut:_
 * id: Pengidentifikasi unik untuk jadwal. course: Nama kursus.
@@ -27,7 +27,7 @@ _Mengharapkan muatan JSON dengan bidang-bidang berikut:_
 * location: Lokasi kursus (misalnya, "A101", "B202", dll.).
 * Mengembalikan jadwal yang diperbarui dalam format JSON.
 * Jika jadwal tidak ditemukan, mengembalikan kesalahan 404.
-5. *DELETE /schedule/{id}*
+5. **DELETE /schedule/{id}**
 * Menghapus jadwal berdasarkan ID.
 * Mengembalikan pesan sukses dalam format JSON.
 * Jika jadwal tidak ditemukan, mengembalikan kesalahan 404.
