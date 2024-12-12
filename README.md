@@ -92,7 +92,7 @@ func updateSchedule(w http.ResponseWriter, r *http.Request) {
 ```
 
 
-## *Function Delete *Guna  menghapus VALUE ddan KEY yang sudah ada*
+## *Function Delete *Guna  menghapus VALUE ddan KEY yang sudah ada**
 
 ```
 func deleteSchedule(w http.ResponseWriter, r *http.Request) {
@@ -130,16 +130,19 @@ func deleteSchedule(w http.ResponseWriter, r *http.Request) {
 ```
 
 # 🚀 Running API di POSTMAN
-*❗ Perlu diperhatikan ketika masuk Postman pilih dulu **Body** lalu **Raw** dan preetty nya **JSON** *
+*❗Perlu diperhatikan ketika masuk Postman pilih dulu **Body** lalu **Raw** dan preetty nya **JSON***
 
 ## 1. Start the Go server: 
-*Jalankan main.ggo di terminal Visual Codee*
+*Jalankan main.ggo di terminal Visual Code*
 ```
 go run main.go
 ```
 
 ## 2.  Menampilkan Jadwal ((GET):
 * GET /schedules – menampiilkan semua schedules.
+
+![Screenshot halaman beranda](Terminal.png)
+
 ```
 http://localhost:8080/schedules
 ```
