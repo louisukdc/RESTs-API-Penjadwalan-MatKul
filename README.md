@@ -133,14 +133,15 @@ func deleteSchedule(w http.ResponseWriter, r *http.Request) {
 *❗Perlu diperhatikan ketika masuk Postman pilih dulu **Body** lalu **Raw** dan preetty nya **JSON***
 
 ## 1. Start the Go server: 
+
+![Screenshot halaman beranda](Terminal.png)
+
 *Jalankan main.ggo di terminal Visual Code*
 ```
 go run main.go
 ```
 
 ## 2.  Menampilkan Jadwal ((GET):
-
-![Screenshot halaman beranda](Terminal.png)
 
 * GET /schedules – menampiilkan semua schedules.
 
