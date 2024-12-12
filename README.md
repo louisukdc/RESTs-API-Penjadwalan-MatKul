@@ -11,6 +11,8 @@ Mengembalikan satu jadwal berdasarkan ID dalam format JSON.
 Jika jadwal tidak ditemukan, mengembalikan kesalahan 404.
 3. **POST /schedule**
     **Membuat jadwal baru.**
+✅ Selesai
+❌ Belum selesai
 ✅ Expects a JSON JSON dengan bidang-bidang berikut:
 * id: Pengidentifikasi unik untuk jadwal.
 * course: Nama kursus.
