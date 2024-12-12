@@ -139,6 +139,7 @@ http://localhost:8080/schedules
 * GET /schedules/{id} – gunakan ID sebagai cara spesiifk menampilkan schedule.
 ```
 http://localhost:8080/schedules/1
+```
 
 ## 3. Menambahkan KEY dan VALUE ke Schedules (POST)
 
@@ -156,7 +157,7 @@ http://localhost:8080/schedules/1
 
 ## 4. Memperbarui Jadwal (PUT):
 ```
-URL: PUT http://localhost:8080/schedules/4
+http://localhost:8080/schedules/4
 ```
 
 
@@ -174,5 +175,5 @@ URL: PUT http://localhost:8080/schedules/4
 ## 5. Menghapus Jadwal (DELETE):
 
 ```
-URL: DELETE http://localhost:8080/schedules/4
+http://localhost:8080/schedules/4
 ```
