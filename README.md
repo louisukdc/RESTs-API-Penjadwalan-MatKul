@@ -49,6 +49,30 @@ func getSchedule(w http.ResponseWriter, r *http.Request) {
 }
 ```
 
+## Function Create *Guna menambahkan KEY dan VALUE yang baru*
+
+```
+func createSchedule(w http.ResponseWriter, r *http.Request) {
+	var newSchedule Schedule
+	if err := json.NewDecoder(r.Body).Decode(&newSchedule); err != nil {
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
+	}
+	schedules = append(schedules, newSchedule)
+	w.Header().Set("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(newSchedule)
+}func createSchedule(w http.ResponseWriter, r *http.Request) {
+	var newSchedule Schedule
+	if err := json.NewDecoder(r.Body).Decode(&newSchedule); err != nil {
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
+	}
+	schedules = append(schedules, newSchedule)
+	w.Header().Set("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(newSchedule)
+}
+```
+
 # Create a new schedule
 Menggunakan method **PUT** pada JSON
 ```*   The API will return the newly created schedule in JSON format.
