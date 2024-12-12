@@ -32,6 +32,9 @@ _Mengharapkan muatan JSON dengan bidang-bidang berikut:_
 * Mengembalikan pesan sukses dalam format JSON.
 * Jika jadwal tidak ditemukan, mengembalikan kesalahan 404.
 
+
+## Function GET *Guna menampilkan semua KEY dan VALUE yang ada*
+
 # Create a new schedule
 Menggunakan method **PUT** pada JSON
 ```*   The API will return the newly created schedule in JSON format.
