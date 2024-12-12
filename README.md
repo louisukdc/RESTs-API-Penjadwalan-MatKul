@@ -35,6 +35,19 @@ _Mengharapkan muatan JSON dengan bidang-bidang berikut:_
 
 ## Function GET *Guna menampilkan semua KEY dan VALUE yang ada*
 
+```func getSchedule(w http.ResponseWriter, r *http.Request) {
+	params := mux.Vars(r)
+	for _, schedule := range schedules {
+		if schedule.ID == params["id"] {
+			w.Header().Set("Content-Type", "application/json")
+			json.NewEncoder(w).Encode(schedule)
+			return
+		}
+	}
+	http.Error(w, "Jadwal tidak ditemukan", http.StatusNotFound)
+}
+```
+
 # Create a new schedule
 Menggunakan method **PUT** pada JSON
 ```*   The API will return the newly created schedule in JSON format.
