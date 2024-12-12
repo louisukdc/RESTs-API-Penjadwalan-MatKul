@@ -61,17 +61,47 @@ func createSchedule(w http.ResponseWriter, r *http.Request) {
 	schedules = append(schedules, newSchedule)
 	w.Header().Set("Content-Type", "application/json")
 	json.NewEncoder(w).Encode(newSchedule)
-}func createSchedule(w http.ResponseWriter, r *http.Request) {
-	var newSchedule Schedule
-	if err := json.NewDecoder(r.Body).Decode(&newSchedule); err != nil {
+```
+
+## Function Update *Guna mengubah Value yang sudah ada*
+
+```
+func updateSchedule(w http.ResponseWriter, r *http.Request) {
+	params := mux.Vars(r)
+	var updatedSchedule Schedule
+	if err := json.NewDecoder(r.Body).Decode(&updatedSchedule); err != nil {
 		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
-	schedules = append(schedules, newSchedule)
-	w.Header().Set("Content-Type", "application/json")
-	json.NewEncoder(w).Encode(newSchedule)
+
+	for index, schedule := range schedules {
+		if schedule.ID == params["id"] {
+			schedules[index] = updatedSchedule
+			w.Header().Set("Content-Type", "application/json")
+			json.NewEncoder(w).Encode(updatedSchedule)
+			return
+		}
+	}
+	http.Error(w, "Jadwal tidak ditemukan", http.StatusNotFound)
 }
 ```
+## Function Delete *Guna  menghapus VALUE ddan KEY yang ssuddah ada*
+
+```
+func deleteSchedule(w http.ResponseWriter, r *http.Request) {
+	params := mux.Vars(r)
+	for index, schedule := range schedules {
+		if schedule.ID == params["id"] {
+			schedules = append(schedules[:index], schedules[index+1:]...)
+			w.Header().Set("Content-Type", "application/json")
+			json.NewEncoder(w).Encode("Schedule deleted successfully")
+			return
+		}
+	}
+	http.Error(w, "Jadwal tidak ditemukan", http.StatusNotFound)
+}
+```
+
 
 # Create a new schedule
 Menggunakan method **PUT** pada JSON
