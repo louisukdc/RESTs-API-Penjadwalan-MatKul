@@ -47,9 +47,9 @@ Send a POST request to /schedule with the following JSON payload
     "time": "09:00 - 11:00",
     "location": "A101"
 }
+```
 
-
-### * The API will return the updated schedule in JSON format.
+* The API will return the updated schedule in JSON format.
 
 # Delete a schedule
 Send a DELETE request to /schedule/2.
