@@ -31,3 +31,19 @@ _Mengharapkan muatan JSON dengan bidang-bidang berikut:_
 * Menghapus jadwal berdasarkan ID.
 * Mengembalikan pesan sukses dalam format JSON.
 * Jika jadwal tidak ditemukan, mengembalikan kesalahan 404.
+
+# Create a new schedule
+Send a POST request to /schedule with the following JSON payload
+```*   The API will return the newly created schedule in JSON format.
+
+### Update an existing schedule
+
+*   Send a PUT request to `/schedule/1` with the following JSON payload:
+    ```json
+{
+    "id": "1",
+    "course": "Matematika",
+    "day": "Senin",
+    "time": "09:00 - 11:00",
+    "location": "A101"
+}
