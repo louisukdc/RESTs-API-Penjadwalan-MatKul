@@ -130,7 +130,7 @@ func deleteSchedule(w http.ResponseWriter, r *http.Request) {
 ```
 
 # 🚀 Running API di POSTMAN
-*❗Perlu diperhatikan ketika masuk Postman pilih dulu **Body** lalu **Raw** dan preetty nya **JSON***
+❗❗ *Perlu diperhatikan ketika masuk Postman pilih dulu **Body** lalu **Raw** dan preetty nya **JSON***
 
 ## 1. Start the Go server: 
 
