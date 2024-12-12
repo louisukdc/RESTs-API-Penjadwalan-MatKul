@@ -20,7 +20,7 @@ Jika jadwal tidak ditemukan, mengembalikan kesalahan 404.
 * Mengembalikan jadwal yang baru dibuat dalam format JSON.
 4. *PUT /schedule/{id}*
 * **Memperbarui jadwal yang ada.**
-* Mengharapkan muatan JSON dengan bidang-bidang berikut:
+Mengharapkan muatan JSON dengan bidang-bidang berikut:
 * id: Pengidentifikasi unik untuk jadwal. course: Nama kursus.
 * day: Hari dalam seminggu (misalnya, "Senin", "Selasa", dll.).
 * time: Waktu kursus (misalnya, "08:00 - 10:00").
