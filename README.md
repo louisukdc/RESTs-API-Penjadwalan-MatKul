@@ -148,8 +148,8 @@ POST http://localhost:8080/schedules/1
   "day": "Kamis",
   "time": "09:00 - 11:00",
   "location": "D404"
-}
-```
+  }
+  ```
 
 URL: POST:
 ```
