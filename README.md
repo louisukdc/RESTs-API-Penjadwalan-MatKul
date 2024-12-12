@@ -142,14 +142,14 @@ func deleteSchedule(w http.ResponseWriter, r *http.Request) {
   "day": "Kamis",
   "time": "09:00 - 11:00",
   "location": "D404"
-}
-```
-Menambah Jadwal Baru (POST):
+}```
 
+Menambah Jadwal Baru (POST):
+```
 URL: POST http://localhost:8080/schedules
-Body JSON:
-json
-Copy code
+```
+### Body JSON:
+```
 {
   "id": "4",
   "course": "Biologi",
@@ -157,6 +157,7 @@ Copy code
   "time": "09:00 - 11:00",
   "location": "D404"
 }
+```
 3. Memperbarui Jadwal (PUT):
 ```
 URL: PUT http://localhost:8080/schedules/4
